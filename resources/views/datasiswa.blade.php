@@ -1,10 +1,9 @@
 @extends('layout2.main')
 
 @section('content')
-    <h1 class="text-center mb-4">Data Siswa</h1>
 
     <div class="container">
-    <a href="/tambahsiswa" type="button" class="btn btn-primary mb-4">Tambah +</a>
+    <a href="/tambahsiswa" type="button" class="btn btn-success mb-3">Tambah +</a>
     @if ($message = Session::get('success'))
         <div class="alert alert-success" role="alert">
             {{ $message }}
@@ -38,8 +37,8 @@
                 <td>0{{ $row->notelepon }}</td>
                 <td>{{ $row->alamat }}</td>
                 <td>
-                <a href="/deletedatasiswa/{{ $row->id }}"  class="btn btn-danger">Delete</a>
                 <a href="/tampilkandatasiswa/{{ $row->id }}" class="btn btn-warning">Edit</a>
+                <a href="/deletedatasiswa/{{ $row->id }}"  class="btn btn-danger">Delete</a>
                 </td>
             </tr>
             @endforeach
