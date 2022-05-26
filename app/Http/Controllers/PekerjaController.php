@@ -17,26 +17,26 @@ class PekerjaController extends Controller
         return view('tambahdatapekerja');
     }
 
-    public function insertdatapekerja(Request $request){
+    public function insertdata(Request $request){
         pekerja::create($request->all());
-        return redirect()->route('pekerja');
+        return redirect()->route('pekerja')->with('success', 'Data Berhasil Ditambahkan');
     }
 
-    public function tampilkandatapekerja($id){
+    public function tampilkandata($id){
 
         $data = pekerja::find($id);
         return view('editdatapekerja', compact('data'));
     }
 
-    public function updatedatapekerja(Request $request, $id){
+    public function updatedata(Request $request, $id){
         $data = pekerja::find($id);
         $data->update($request->all());
-        return redirect()->route('pekerja');
+        return redirect()->route('pekerja')->with('success', 'Data Berhasil Diedit');
     }
 
-    public function deletedatapekerja($id){
+    public function deletedata($id){
         $data = pekerja::find($id);
         $data->delete();
-        return redirect()->route('pekerja');
+        return redirect()->route('pekerja')->with('success', 'Data Berhasil Didelete');
     }
 }

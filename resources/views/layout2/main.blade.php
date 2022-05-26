@@ -18,6 +18,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="/asset/dist/css/adminlte.min.css">
   <!-- line awesome -->
   <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <!-- notifikasi -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -118,6 +120,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="/asset/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="/asset/dist/js/adminlte.min.js"></script>
+    <!-- notifikasi -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script>
+      @if (Session::has('success'))
+        toastr.success("{{Session::get('success') }}")
+      @endif
+    </script>
     
 </body>
 

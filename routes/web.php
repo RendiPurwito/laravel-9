@@ -22,17 +22,17 @@ Route::get('/', function () {
 });
 
 // Pekerja
-Route::get('/pekerja', [PekerjaController::class, 'index'])->name('pekerja');
+Route::get('/pekerja',[PekerjaController::class, 'index'])->name('pekerja');
 
-Route::get('/tambahpekerja', [PekerjaController::class, 'tambahpekerja'])->name('tambahpekerja');
+Route::get('/tambahpekerja',[PekerjaController::class, 'tambahpekerja'])->name('tambahpekerja');
 
-Route::post('/insertdatapekerja', [PekerjaController::class, 'insertdatapekerja'])->name('insertdatapekerja');
+Route::post('/insertdata',[PekerjaController::class, 'insertdata'])->name('insertdata');
 
-Route::get('/tampilkandatapekerja/{id}', [PekerjaController::class, 'tampilkandatapekerja'])->name('tampilkandatapekerja');
+Route::get('/tampilkandata/{id}',[PekerjaController::class, 'tampilkandata'])->name('tampilkandata');
 
-Route::post('/updatedatapekerja/{id}', [PekerjaController::class, 'updatedatapekerja'])->name('updatedatapekerja');
+Route::post('/updatedata/{id}',[PekerjaController::class, 'updatedata'])->name('updatedata');
 
-Route::get('/deletedatapekerja/{id}', [PekerjaController::class, 'deletedatapekerja'])->name('deletedatapekerja');
+Route::get('/deletedata/{id}',[PekerjaController::class, 'deletedata'])->name('deletedata');
 
 // Siswa
 Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa');

@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container pt-5">
     <a href="/tambahsiswa" type="button" class="btn btn-success mb-3">Tambah +</a>
     @if ($message = Session::get('success'))
         <div class="alert alert-success" role="alert">

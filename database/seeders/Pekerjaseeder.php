@@ -17,7 +17,7 @@ class Pekerjaseeder extends Seeder
     {
         DB::table('pekerjas')->insert([
             'nama' => 'Dwi Purwito',
-            'jeniskelamin' => 'cowo',
+            'jeniskelamin' => 'laki-laki',
             'notelpon' => '085774859389',
         ]);
     }

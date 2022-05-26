@@ -1,10 +1,9 @@
 @extends('layout2.main')
 
 @section('content')
-<div class="container">
-    <h2 class="my-4 mx-5">Data Perpustakaan</h2>
-    <a href="/tambahperpustakaan" class="btn btn-secondary my-4">Tambah +</a>
-    <table class="table table-dark table-striped">
+<div class="container pt-5">
+    <a href="/tambahperpustakaan" class="btn btn-success mb-3">Tambah +</a>
+    <table class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>

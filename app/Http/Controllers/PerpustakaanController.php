@@ -23,7 +23,7 @@ class PerpustakaanController extends Controller
     {
         // dd($request->all());
         Perpustakaan::create($request->all());
-        return redirect()->route('perpustakaan');
+        return redirect()->route('perpustakaan')->with('success', 'Data Berhasil Ditambahkan');
     }
 
     public function tampilkandataperpustakaan($id)
@@ -36,13 +36,13 @@ class PerpustakaanController extends Controller
     {
         $data = Perpustakaan::find($id);
         $data->update($request->all());
-        return redirect()->route('perpustakaan');
+        return redirect()->route('perpustakaan')->with('success', 'Data Berhasil Diedit');
     }
 
     public function deleteperpustakaan($id)
     {
         $data = Perpustakaan::find($id);
         $data->delete();
-        return redirect()->route('perpustakaan');
+        return redirect()->route('perpustakaan')->with('success', 'Data Berhasil Didelete');
     }
 }

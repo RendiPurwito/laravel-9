@@ -11,7 +11,7 @@
         <div class="col-8">
             <div class="card">
                 <div class="card-body" style="width: 90%;">
-                    <form action="/insertdatapekerja" method="post" enctype="multipart/form-data">
+                    <form action="/insertdata" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
@@ -19,20 +19,13 @@
                         </div>
 
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" value="cowo" name="jeniskelamin">
-                                <label class="form-check-label">
-                                    cowo
-                                </label>
+                                <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
+                                <select class="form-select" name="jeniskelamin" aria-label="Default select example">
+                                    <option selected>Jenis Kelamin</option>
+                                    <option value="laki-laki">Laki-Laki</option>
+                                    <option value="perempuan">Perempuan</option>
+                                </select>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" value="cewe" name="jeniskelamin" checked>
-                                <label class="form-check-label">
-                                    cewe
-                                </label>
-                            </div>
-                        </div>
 
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">No. Telpon</label>
