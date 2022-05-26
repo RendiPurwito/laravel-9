@@ -80,6 +80,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <p>Siswa</p>
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a href="../perpustakaan" class="nav-link">
+                    <img src="/asset/dist/img/profile.png" alt="" style="width: 35px; margin-left: -5px; margin-right: 20px;">
+                    <p>Perpustakaan</p>
+                  </a>
+                </li>
               </ul>
             </li>
           </ul>

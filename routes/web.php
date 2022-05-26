@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PekerjaController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\PerpustakaanController;
 
 
 /*
@@ -43,3 +44,10 @@ Route::get('/tampilkandatasiswa/{id}', [SiswaController::class, 'tampilkandatasi
 Route::post('/updatedatasiswa/{id}', [SiswaController::class, 'updatedatasiswa'])->name('updatedatasiswa');
 
 Route::get('/deletedatasiswa/{id}', [SiswaController::class, 'deletedatasiswa'])->name('deletedatasiswa');
+
+// perpustakaan
+Route::get('/perpustakaan', [PerpustakaanController::class, 'index'])->name('perpustakaan');
+
+Route::get('/tambahperpustakaan', [PerpustakaanController::class, 'tambahperpustakaan'])->name('tambahperpustakaan');
+
+Route::post('/insertperpustakaan', [PerpustakaanController::class, 'insertperpustakaan'])->name('insertperpustakaan');
