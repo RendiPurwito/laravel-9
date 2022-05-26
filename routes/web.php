@@ -52,8 +52,8 @@ Route::get('/tambahperpustakaan', [PerpustakaanController::class, 'tambahperpust
 
 Route::post('/insertperpustakaan', [PerpustakaanController::class, 'insertperpustakaan'])->name('insertperpustakaan');
 
-Route::get('/tampilkandataperpustakaan{id}', [PerpustakaanController::class, 'tampilkandataperpustakaan'])->name('tampilkandataperpustakaan');
+Route::get('/tampilkandataperpustakaan/{id}', [PerpustakaanController::class, 'tampilkandataperpustakaan'])->name('tampilkandataperpustakaan');
 
-Route::post('/updateperpustakaan{id}', [PerpustakaanController::class, 'updateperpustakaan'])->name('updateperpustakaan');
+Route::post('/updateperpustakaan/{id}', [PerpustakaanController::class, 'updateperpustakaan'])->name('updateperpustakaan');
 
-Route::get('/deleteperpustakaan{id}', [PerpustakaanController::class, 'deleteperpustakaan'])->name('deleteperpustakaan');
+Route::get('/deleteperpustakaan/{id}', [PerpustakaanController::class, 'deleteperpustakaan'])->name('deleteperpustakaan');

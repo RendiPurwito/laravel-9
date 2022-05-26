@@ -36,12 +36,13 @@ class PerpustakaanController extends Controller
     {
         $data = Perpustakaan::find($id);
         $data->update($request->all());
+        return redirect()->route('perpustakaan');
     }
 
     public function deleteperpustakaan($id)
     {
         $data = Perpustakaan::find($id);
-        $data->deleteperpustakaan();
+        $data->delete();
         return redirect()->route('perpustakaan');
     }
 }
