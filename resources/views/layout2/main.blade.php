@@ -16,6 +16,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="/asset/plugins/fontawesome-free/css/all.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="/asset/dist/css/adminlte.min.css">
+  <!-- line awesome -->
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -55,7 +57,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
         <!-- Sidebar Menu -->
-        <nav class="mt-2">
+
+        <div class="user-panel d-flex">
+        <div class="info ">
+          <h4 class="ms-auto"><a href="/" class="d-block"><span class="las la-igloo" style="color: white; margin-left: 5px; font-size: 30px;"></span> DASHBOARD</a></h4>
+        </div>
+      </div>
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
@@ -105,6 +112,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="/asset/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="/asset/dist/js/adminlte.min.js"></script>
+    
 </body>
 
 </html>
