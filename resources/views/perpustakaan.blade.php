@@ -29,8 +29,8 @@
                 <td>{{ $row->penerbit }}</td>
                 <td>{{ $row->tahunterbit }}</td>
                 <td>
-                    <a href="/tampilkandata/{{ $row->id }}" class="btn btn-warning">Edit</a>
-                    <a href="/delete/{{ $row->id }}" class="btn btn-danger">Delete</a>
+                    <a href="/tampilkandataperpustakaan/{{ $row->id }}" class="btn btn-warning">Edit</a>
+                    <a href="/deleteperpustakaan/{{ $row->id }}" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
             @endforeach
