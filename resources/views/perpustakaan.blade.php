@@ -1,5 +1,7 @@
 @extends('layout2.main')
 
+@section('title', 'Data Buku')
+
 @section('content')
 <div class="container pt-5">
     <a href="/tambahperpustakaan" class="btn btn-success mb-3">Tambah +</a>
