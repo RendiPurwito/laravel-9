@@ -12,32 +12,31 @@
                 <div class="card-body">
                     <form action="/updatedata/{{ $data->id }}" method="post" enctype="multipart/form-data">
                         @csrf
+                        @method('put')
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
-                            <input type="text" name="nama" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" value="{{ $data->nama }}">
+                            <input type="text" name="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->nama }}">
                         </div>
 
                         <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" value="laki-laki" name="jeniskelamin">
-                                    <label class="form-check-label">
-                                      laki-laki
-                                    </label>
-                                  </div>
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="radio" value="perempuan" name="jeniskelamin" checked>
-                                    <label class="form-check-label">
-                                      perempuan
-                                    </label>
-                                  </div>
+                            <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="laki-laki" name="jeniskelamin">
+                                <label class="form-check-label">
+                                    laki-laki
+                                </label>
                             </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" value="perempuan" name="jeniskelamin" checked>
+                                <label class="form-check-label">
+                                    perempuan
+                                </label>
+                            </div>
+                        </div>
 
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">No. Telpon</label>
-                            <input type="text" name="notelpon" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" value="{{ $data->notelpon }}">
+                            <input type="text" name="notelpon" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->notelpon }}">
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
 

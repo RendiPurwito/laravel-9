@@ -30,9 +30,9 @@ Route::post('/insertdata',[PekerjaController::class, 'insertdata'])->name('inser
 
 Route::get('/tampilkandata/{id}',[PekerjaController::class, 'tampilkandata'])->name('tampilkandata');
 
-Route::post('/updatedata/{id}',[PekerjaController::class, 'updatedata'])->name('updatedata');
+Route::put('/updatedata/{id}',[PekerjaController::class, 'updatedata'])->name('updatedata');
 
-Route::get('/deletedata/{id}',[PekerjaController::class, 'deletedata'])->name('deletedata');
+Route::delete('/deletedata/{id}',[PekerjaController::class, 'deletedata'])->name('deletedata');
 
 // Siswa
 Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa');

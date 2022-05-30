@@ -34,7 +34,13 @@
                         <td>{{ $row->created_at }}</td>
                         <td>
                             <a href="/tampilkandata/{{ $row->id }}"  class="btn btn-warning">Edit</a>
-                            <a href="/deletedata/{{ $row->id }}" class="btn btn-danger">Delete</a>
+
+                            <form method="post" action="/deletedata/{{ $row->id }}">
+                                @csrf
+                                @method('delete')
+                                <button type="submit" class="btn btn-danger">Delete</button> 
+                            </form>
+                            <!-- <a href="/deletedata/{{ $row->id }}" class="btn btn-danger">Delete</a> -->
                         </td>
                     </tr>
                 @endforeach

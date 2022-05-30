@@ -20,7 +20,7 @@ class PekerjaController extends Controller
     public function insertdata(Request $request){
         $this->validate($request, [
             'nama' => 'required',
-            'notelpon' => 'required',
+            'notelpon' => 'required'
         ]);
         pekerja::create($request->all());   
         return redirect()->route('pekerja')->with('success', 'Data Berhasil Ditambahkan');
